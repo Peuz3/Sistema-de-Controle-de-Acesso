@@ -1,13 +1,13 @@
-package com.dio.Sistema.de.Controle.de.Acesso;
+package com.dio.sistema;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SistemaDeControleDeAcessoApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SistemaDeControleDeAcessoApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 
 }

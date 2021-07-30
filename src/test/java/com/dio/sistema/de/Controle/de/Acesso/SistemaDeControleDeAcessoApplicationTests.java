@@ -1,4 +1,4 @@
-package com.dio.Sistema.de.Controle.de.Acesso;
+package com.dio.sistema.de.Controle.de.Acesso;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
