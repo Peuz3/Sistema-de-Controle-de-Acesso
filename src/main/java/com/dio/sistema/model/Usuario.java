@@ -2,9 +2,9 @@ package com.dio.sistema.model;
 
 import lombok.*;
 
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
+import java.io.Serializable;
 import java.math.BigDecimal;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Getter
@@ -13,7 +13,10 @@ import java.time.LocalDateTime;
 @NoArgsConstructor //Construtor vazio
 @EqualsAndHashCode
 @Builder
-public class Usuario {
+@Entity
+public class Usuario implements Serializable {
+    @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
     @ManyToOne
     private CategoriaUsuario categoriaUsuario;

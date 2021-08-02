@@ -1,6 +1,5 @@
 package com.dio.sistema.model;
 
-
 import lombok.*;
 
 import javax.persistence.Entity;
@@ -16,9 +15,11 @@ import java.io.Serializable;
 @EqualsAndHashCode
 @Builder
 @Entity
-public class CategoriaUsuario implements Serializable {
+public class Ocorrencia implements Serializable {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private long id;
+    private String nome;
     private String descricao;
+
 }

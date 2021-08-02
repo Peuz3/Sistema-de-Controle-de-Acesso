@@ -1,13 +1,10 @@
 package com.dio.sistema.model;
 
-
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -16,9 +13,12 @@ import java.io.Serializable;
 @EqualsAndHashCode
 @Builder
 @Entity
-public class CategoriaUsuario implements Serializable {
+public class Calendario implements Serializable {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    private long id;
-    private String descricao;
+    private Long id;
+    @ManyToOne
+    private TipoData tipoData;
+    private String descriacao;
+    private LocalDateTime dataEspecial;
 }
