@@ -1,6 +1,7 @@
 package com.dio.sistema.model;
 
 import lombok.*;
+import org.hibernate.envers.Audited;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,6 +16,7 @@ import java.io.Serializable;
 @EqualsAndHashCode
 @Builder
 @Entity
+@Audited
 public class JornadaTrabalho implements Serializable {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)

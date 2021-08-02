@@ -12,28 +12,29 @@ import java.time.LocalDateTime;
 
 @Getter
 @Setter
-@AllArgsConstructor //Construtor com argumentos
-@NoArgsConstructor //Construtor vazio
+@AllArgsConstructor
+@NoArgsConstructor
 @EqualsAndHashCode
 @Builder
 @Entity
 public class BancoHoras {
 
-    //Implementando a Chave composta
-    @AllArgsConstructor //Construtor com argumentos
-    @NoArgsConstructor //Construtor vazio
+
     @EqualsAndHashCode
     @Embeddable
-    public class BancoHorasID implements Serializable{
+    @Getter
+    @Setter
+    public  class BancoHorasId implements Serializable{
         private long idBancoHoras;
         private long idMovimentacao;
         private long idUsuario;
+
+
     }
-    @Id
     @EmbeddedId
-    private long BancoHorasID;
+    private BancoHorasId bancoHorasId;
     private LocalDateTime dataTrabalhada;
-    private BigDecimal quantidadeHorasTrabalhadas;
-    private BigDecimal saldoHorasTrabalhadas;
+    private BigDecimal quantidadeHoras;
+    private BigDecimal saldoHoras;
 
 }
